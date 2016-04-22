@@ -15,9 +15,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- @brief      \b PubNub client core class extension to provide access to 'publish' API group.
- @discussion Set of API which allow to push data to \b PubNub service. Data pusched to remote data objects 
-             called 'channels' and then delivered on their live feeds to all subscribers.
+ @brief      \b This extension of the PubNub client class provides access to the 'publish' APIs.
+ @discussion These APIs allow a client to push data to the \b PubNub service. Data are pushed to remote
+             'channels' to which other clients may subscribe.
  
  @author Sergey Mamontov
  @since 4.0
@@ -31,38 +31,38 @@ NS_ASSUME_NONNULL_BEGIN
 ///------------------------------------------------
 
 /**
- @brief  List of channels on which client subscribed now.
+ @brief  List of channels on which the client is currently subscribed.
  
- @return \a NSArray of channel names on which client subscribed at this moment.
+ @return \a NSArray of channel names on which the client is subscribed at this moment.
  
  @since 4.0
  */
 - (NSArray<NSString *> *)channels;
 
 /**
- @brief  List of channels group on which client subscribed now.
+ @brief  List of channel groups on which the client is currently subscribed.
  
- @return \a NSArray of channel group names on which client subscribed at this moment.
+ @return \a NSArray of channel group names on which the client is subscribed at this moment.
  
  @since 4.0
  */
 - (NSArray<NSString *> *)channelGroups;
 
 /**
- @brief  List of channels for which presence events observation has been enabled.
+ @brief  List of channels for which presence events are being observed.
  
- @return \a NSArray of presence channel names on which client subscribed at this moment.
+ @return \a NSArray of presence channel names on which the client is subscribed at this moment.
  
  @since 4.0
  */
 - (NSArray<NSString *> *)presenceChannels;
 
 /**
- @brief  Check whether \b PubNub client currently subscribed on specified data object or not.
+ @brief  Check whether the \b PubNub client is currently subscribed on the specified channel.
  
- @param name Reference on name of data object against which check should be performed.
+ @param name Name of the channel to check this client's subscription status against.
  
- @return \c YES in case if client currently subscribed to specified data object.
+ @return \c YES in case if the client is currently subscribed to specified channel.
  
  @since 4.0
  */
